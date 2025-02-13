@@ -1,0 +1,332 @@
+    body {
+        font-family: 'Arial', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f8f9fa;
+        color: #333;
+        overflow-x: hidden; /* Evita rolagem horizontal */
+        /*text-align: center;*/
+    }
+
+    header {
+        background: #007bff;
+        color: white;
+        text-align: center;
+        padding: 20px 0;
+        position: relative;
+        z-index: 10; /* Garante que o cabeçalho fique acima de outros elementos */
+    }
+
+    nav {
+        background: #343a40;
+    }
+
+    nav ul {
+        list-style: none;
+        padding: 0;
+        text-align: center;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    nav ul li {
+        margin: 0 15px;
+    }
+
+    nav ul li a {
+        color: white;
+        text-decoration: none;
+        padding: 10px;
+        transition: 0.3s;
+    }
+
+    nav ul li a:hover {
+        background: #007bff;
+        border-radius: 5px;
+    }
+
+    /* Estilo do menu hamburguer */
+    .menu-toggle {
+        display: none;
+        cursor: pointer;
+        font-size: 24px;
+        position: absolute;
+        right: 20px;
+        top: 15px;
+        z-index: 20; /* Garante que o botão hamburguer fique acima do conteúdo */
+    }
+
+    .menu-toggle div {
+        width: 30px;
+        height: 4px;
+        background-color: white;
+        margin: 5px 0;
+    }
+
+    /* Modo Mobile */
+    @media (max-width: 768px) {
+        .menu-toggle {
+            display: block;
+        }
+
+        nav ul {
+            display: none;
+            flex-direction: column;
+            position: absolute;
+            top: 70px;
+            right: 20px;
+            background: #343a40;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 10px;
+            width: 200px;
+            border-radius: 5px;
+            z-index: 10; /* Garante que o menu não sobreponha o conteúdo */
+        }
+
+        nav ul.active {
+            display: flex;
+        }
+
+        nav ul li {
+            margin: 10px 0;
+            text-align: left;
+        }
+    }
+
+    section {
+        padding: 20px;
+        margin: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1, h2 {
+        margin: 0;
+    }
+
+    p {
+        font-size: 1.1rem;
+        line-height: 1.6;
+    }
+
+
+    /* Certificação */
+    #certifications {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px; /* Diminui o espaçamento entre os itens */
+        padding: 20px;
+    }
+
+    .certification-item {
+        text-align: center;
+        max-width: 150px;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+    }
+
+    .certification-item img {
+        width: 100%;
+        max-width: 150px;
+        height: auto;
+        transition: transform 0.3s ease;
+    }
+
+    .certification-item:hover img {
+        transform: scale(1.1); /* Aumenta 1.1x quando o mouse passar */
+    }
+
+    /* Estilo para o modal de imagem */
+    .modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        justify-content: center;
+        align-items: center;
+    }
+
+    #modal-img {
+        max-width: 90%;
+        max-height: 90%;
+        border-radius: 8px;
+    }
+
+    .close {
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        font-size: 30px;
+        color: white;
+        cursor: pointer;
+    }
+
+    /* Quando a imagem do modal estiver visível */
+    .modal.show {
+        display: flex;
+    }
+
+    .certification-item img {
+        margin-bottom: 5px; /* Reduz o espaço abaixo da imagem */
+    }
+    
+    .certification-item p {
+        margin-top: 5px; /* Ajuste o espaço acima do texto, se necessário */
+    }
+
+    /*css das imagens dos sites*/
+    .image-section {
+        display: flex;
+        justify-content: space-around;
+        gap: 20px;
+      }
+      
+      .image-container {
+        text-align: center;
+      }
+      
+      .image-container img {
+        width: 100px; /* Ajuste conforme o tamanho da sua imagem */
+        height: auto;
+        cursor: pointer;
+      }
+      
+      .image-container p {
+        margin-top: 10px;
+        font-size: 14px;
+      }
+      
+
+    /*css para imagens com texto e botão*/
+      .projects {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        padding: 40px;
+      }
+      
+     
+
+      .card {
+        background: white;
+        border-radius: 10px;
+        overflow: hidden;
+        width: 300px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease-in-out;
+      }
+      
+      .card:hover {
+        transform: translateY(-5px);
+      }
+      
+      .card img {
+        width: 100%;
+        height: auto;
+      }
+      
+      .card-content {
+        padding: 20px;
+        text-align: center;
+      }
+      
+      .card h3 {
+        margin: 10px 0;
+      }
+      
+      .card p {
+        font-size: 14px;
+        color: #666;
+      }
+      
+      .btn {
+        display: inline-block;
+        background: #28418b; /* Cor do botão parecida com a imagem */
+        color: white;
+        padding: 10px 15px;
+        text-decoration: none;
+        border-radius: 20px;
+        font-weight: bold;
+        margin-top: 15px;
+      }
+      
+      .btn:hover {
+        background: #20123d;
+      }
+      
+      /*css da galeria*/
+      .gallery {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        padding: 20px;
+    }
+    
+    .image-container {
+        position: relative;
+        width: 150px;
+        cursor: pointer;
+    }
+    
+    .image-container img {
+        width: 100%;
+        border-radius: 8px;
+        transition: transform 0.3s ease;
+    }
+    
+    .image-container:hover img {
+        transform: scale(1.1);
+    }
+    
+    /* Ícone da lupa */
+    .zoom-icon {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 24px;
+        background: rgba(0, 0, 0, 0.7);
+        color: white;
+        padding: 10px;
+        border-radius: 50%;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+    
+    .image-container:hover .zoom-icon {
+        opacity: 1;
+    }
+
+    /*Carrossel de logos*/
+    .carrossel {
+        width: 100%;
+        max-width: 95%; /* Limite máximo para telas grandes */
+        margin: 0 auto; /* Centraliza o carrossel na tela */
+        overflow: hidden;
+        position: relative;
+    }
+    
+    .carrossel-container {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+    }
+    
+    .carrossel-item {
+        flex: 0 0 33.33%; /* Mostra 3 imagens por vez */
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .carrossel-item img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }

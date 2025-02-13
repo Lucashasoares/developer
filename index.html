@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lucas Alves - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Lucas Alves</h1>
+        <p>Front-End Developer | Scrum Master | Digital Creator</p>
+
+        <!-- Botão do menu hambúrguer -->
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
+        <!-- Menu de navegação -->
+        <nav>
+            <ul>
+                <li><a href="#about">Sobre</a></li>
+                <li><a href="#skills">Habilidades</a></li>
+                <li><a href="#websites">Web Sites</a></li>
+                <li><a href="#certifications">Certificações</a></li>
+                <li><a href="#contact">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about">
+        <h2>Sobre Mim</h2>
+        <p>Sou um desenvolvedor Front-End com experiência em criação de sites, design digital e metodologias ágeis.</p>
+    </section>
+
+    <!-- Seção de Habilidades -->
+    <section id="skills">
+        <h2>Habilidades</h2>
+        <ul>
+            <li>HTML & CSS</li>
+            <li>JavaScript</li>
+            <li>React</li>
+            <li>Metodologias Ágeis (Scrum, Kanban)</li>
+            <li>Design Responsivo</li>
+        </ul>
+    </section>
+
+<!-- Seção de Websites -->
+<section class="image-section">
+        <div class="image-container">
+          <a href="https://link1.com">
+            <img src="imagem1.jpg" alt="Imagem 1">
+            <p>Texto 1</p>
+          </a>
+        </div>
+        <div class="image-container">
+          <a href="https://link2.com">
+            <img src="imagem2.jpg" alt="Imagem 2">
+            <p>Texto 2</p>
+          </a>
+        </div>
+        <div class="image-container">
+          <a href="https://link3.com">
+            <img src="imagem3.jpg" alt="Imagem 3">
+            <p>Texto 3</p>
+          </a>
+        </div>
+        <div class="image-container">
+          <a href="https://link4.com">
+            <img src="imagem4.jpg" alt="Imagem 4">
+            <p>Texto 4</p>
+          </a>
+        </div>
+      
+</section>
+
+<section id="websites">
+  <div>
+    <h2>Web Sites</h2>
+  </div>
+  <div class="projects">
+    <div class="card">
+      <img src="gallery/unsueno.jpg" alt="Projeto 1">
+      <div class="card-content">
+        <h3>Un Sueno</h3>
+        <p>Welcome to our sports academy, where we believe soccer & fitness is for everyone.</p>
+        <a href="https://www.ussfa.ca/" class="btn" target="_blank" rel="noopener noreferrer">To view</a>
+      </div>
+    </div>
+  
+    <div class="card">
+      <img src="gallery/neurocore.jpg" alt="Projeto 2">
+      <div class="card-content">
+        <h3>Neurocore Pilates</h3>
+        <p>Introducing a pioneering health concept, our Pilates studio features a team of skilled and seasoned professionals committed to your well-being.</p>
+        <a href="https://www.neurocorepilates.com.br/" class="btn" target="_blank" rel="noopener noreferrer">To view</a>
+      </div>
+    </div>
+  
+    <div class="card">
+      <img src="gallery/artpneu.jpg" alt="Projeto 3">
+      <div class="card-content">
+        <h3>Art Pneus</h3>
+        <p>Art Pneus has been growing at a fast pace, bringing the best in tire art.</p>
+        <a href="https://pneu.vercel.app/" class="btn" target="_blank" rel="noopener noreferrer">To view</a>
+      </div>
+    </div>
+  </div>
+  </section>
+  
+
+    <!-- Seção de Certificações -->
+<section>
+    <h2>Certificações</h2>
+    <div id="certifications">
+        <div class="certification-item" onclick="openImage('gallery/scrum.jpg')">
+            <img src="gallery/scrum-thumb.jpg" alt="Scrum Master" />
+            <p>Scrum Master</p>
+        </div>
+        <div class="certification-item" onclick="openImage('gallery/product-owner.jpg')">
+            <img src="gallery/product-owner-thumb.jpg" alt="Product Owner" />
+            <p>Product Owner</p>
+        </div>
+        <div class="certification-item" onclick="openImage('gallery/kanban.jpg')">
+            <img src="gallery/kanban-thumb.jpg" alt="Kanban" />
+            <p>Kanban</p>
+        </div>
+        <div class="certification-item" onclick="openImage('gallery/javascript.jpg')">
+            <img src="gallery/javascript-thumb.jpg" alt="JavaScript" />
+            <p>JavaScript</p>
+        </div>
+    </div>
+</section>
+
+<section>
+  <h2>Logotipos</h2>
+  <div class="carrossel">
+  <div class="carrossel-container">
+      <div class="carrossel-item">
+          <img src="imagem1.jpg" alt="Imagem 1">
+      </div>
+      <div class="carrossel-item">
+          <img src="imagem2.jpg" alt="Imagem 2">
+      </div>
+      <div class="carrossel-item">
+          <img src="imagem3.jpg" alt="Imagem 3">
+      </div>
+      <div class="carrossel-item">
+          <img src="imagem4.jpg" alt="Imagem 4">
+      </div>
+      <div class="carrossel-item">
+          <img src="imagem5.jpg" alt="Imagem 5">
+      </div>
+      <div class="carrossel-item">
+          <img src="imagem6.jpg" alt="Imagem 6">
+      </div>
+  </div>
+</div>
+</section>
+
+<!-- Modal para mostrar imagem maior -->
+<div id="image-modal" class="modal" onclick="closeImage()">
+  <img id="modal-img" src="" alt="Imagem maior" />
+</div>
+
+
+    <!-- Seção de Contato -->
+    <section id="contact">
+        <h2>Contato</h2>
+        <p>Você pode me encontrar nas seguintes plataformas:</p>
+        <ul>
+            <li>Email: lucas.alves@example.com</li>
+            <li>LinkedIn: <a href="https://www.linkedin.com/in/lucasalves">linkedin.com/in/lucasalves</a></li>
+            <li>GitHub: <a href="https://github.com/lucasalves">github.com/lucasalves</a></li>
+        </ul>
+    </section>
+
+    <script>
+        function toggleMenu() {
+            document.querySelector("nav ul").classList.toggle("active");
+        }
+    </script>
+</body>
+</html>
