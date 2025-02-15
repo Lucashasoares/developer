@@ -36,10 +36,23 @@ let currentIndex = 0;
 const totalItems = document.querySelectorAll('.carrossel-item').length;
 const container = document.querySelector('.carrossel-container');
 
-function moveCarrossel() {
-    currentIndex = (currentIndex + 1) % (totalItems - 2); // Move para o próximo conjunto de 3 imagens
+function moverCarrossel(direction) {
+    currentIndex += direction;
+
+    // Verifica os limites
+    if (currentIndex < 0) {
+        currentIndex = totalItems - 3; // Volta para o último conjunto de 3 imagens
+    } else if (currentIndex > totalItems - 3) {
+        currentIndex = 0; // Volta para o primeiro conjunto de 3 imagens
+    }
+
     const offset = -currentIndex * 33.33; // Calcula o deslocamento
     container.style.transform = `translateX(${offset}%)`;
 }
 
-setInterval(moveCarrossel, 3000); // Muda as imagens a cada 3 segundos
+// Função para avançar automaticamente (opcional)
+function autoMoverCarrossel() {
+    moverCarrossel(1);
+}
+
+setInterval(autoMoverCarrossel, 3000); // Muda as imagens a cada 3 segundos

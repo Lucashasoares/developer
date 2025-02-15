@@ -306,7 +306,7 @@
     /*Carrossel de logos*/
     .carrossel {
         width: 100%;
-        max-width: 95%; /* Limite máximo para telas grandes */
+        max-width: 1200px; /* Limite máximo para telas grandes */
         margin: 0 auto; /* Centraliza o carrossel na tela */
         overflow: hidden;
         position: relative;
@@ -326,7 +326,33 @@
     }
     
     .carrossel-item img {
-        max-width: 100%;
+        max-width: 60%;
         height: auto;
         border-radius: 10px;
+    }
+    
+    /* Estilos para as setas */
+    .carrossel-seta {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        cursor: pointer;
+        padding: 10px;
+        font-size: 24px;
+        z-index: 10;
+    }
+    
+    .carrossel-seta-esquerda {
+        left: 10px;
+    }
+    
+    .carrossel-seta-direita {
+        right: 10px;
+    }
+    
+    .carrossel-seta:hover {
+        background-color: rgba(0, 0, 0, 0.8);
     }
