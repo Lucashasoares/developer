@@ -34,7 +34,9 @@
               "@angular/material/prebuilt-themes/azure-blue.css",
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [],
+            "baseHref": "/analytics-dashboard/", 
+            "deployUrl": "/analytics-dashboard/" 
           },
           "configurations": {
             "production": {

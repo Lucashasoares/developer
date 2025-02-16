@@ -1,0 +1,12 @@
+{
+    "routes": [
+      {
+        "src": "/analytics-dashboard/(.*)",
+        "dest": "/analytics-dashboard/index.html"
+      },
+      {
+        "src": "/(.*)",
+        "dest": "/index.html"
+      }
+    ]
+  }
