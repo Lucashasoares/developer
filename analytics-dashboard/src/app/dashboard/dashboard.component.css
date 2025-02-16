@@ -1,0 +1,11 @@
+.dashboard-container {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+}
+
+.analytics-card {
+    width: 300px;
+    text-align: center;
+    padding: 20px;
+}
