@@ -1,0 +1,62 @@
+.App {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+input {
+  padding: 10px;
+  margin: 10px;
+  width: 300px;
+}
+
+button {
+  padding: 10px 15px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+button:disabled {
+  background-color: gray;
+}
+
+.movies-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 20px;
+  max-height: 500px; /* Altura máxima da lista */
+  overflow-y: auto; /* Habilita rolagem se necessário */
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+}
+
+.movie-card {
+  background: white;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.movie-card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.back-to-portfolio {
+  margin-top: 20px; /* Dá um espaço entre os filmes e o botão */
+  padding: 10px 20px;
+  font-size: 16px;
+  text-decoration: none; /* Remove o sublinhado do link */
+  transition: background-color 0.3s ease-in-out;
+}
+
+.back-to-portfolio:hover {
+  background-color: #0056b3; /* Tom mais escuro de azul */
+}
