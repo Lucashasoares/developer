@@ -1,16 +1,22 @@
 {
-    "routes": [
-      {
-        "src": "/analytics-dashboard/(.*)",
-        "dest": "/analytics-dashboard/index.html"
-      },
-      {
-        "src": "/analytics-dashboard",
-        "dest": "/analytics-dashboard/index.html"
-      },
-      {
-        "src": "/(.*)",
-        "dest": "/index.html"
-      }
-    ]
-  }
+  "rewrites": [
+    {
+      "source": "/analytics-dashboard/(.*)",
+      "destination": "/analytics-dashboard/index.html"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/analytics-dashboard/(.*)",
+      "dest": "/analytics-dashboard/index.html"
+    },
+    {
+      "src": "/analytics-dashboard",
+      "dest": "/analytics-dashboard/index.html"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
+  ]
+}
