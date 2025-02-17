@@ -1,0 +1,19 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "movies/package.json",
+        "use": "@vercel/static-build",
+        "config": {
+          "distDir": "movies/build"
+        }
+      }
+    ],
+    "routes": [
+      {
+        "src": "/movies/(.*)",
+        "dest": "/movies/$1"
+      }
+    ]
+  }
+  
