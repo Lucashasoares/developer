@@ -30,7 +30,7 @@ function mostrarObjeto() {
 
 
 let btnDesfazerUltimoDia = document.createElement("button");
-btnDesfazerUltimoDia.innerText = "Desfazer Ultimo Dia";
+btnDesfazerUltimoDia.innerText = "ERASE LAST DAY";
 areaDesfazerUltimoDia.appendChild(btnDesfazerUltimoDia);
 btnDesfazerUltimoDia.style.display = "none";
 btnDesfazerUltimoDia.addEventListener("click", desfazerUltimoDia);
