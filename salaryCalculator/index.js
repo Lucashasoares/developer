@@ -65,6 +65,8 @@ function tudo() {
         btnDesfazerUltimoDia.style.display = "none";
     }
 
+    
+
     relatorio.innerHTML = 
         "Hour total: " + total + " hours, </br>" +
         "Extra hours: " + horaExtra + " hours,  </br>" +
@@ -83,7 +85,9 @@ function calcularValor() {
     const valorHora = document.getElementById("valorHora").value;
 
     if (valorHora === "" || valorHora === NaN) {
-        valorReceber.innerHTML = "Type hour value"
+        valorReceber.innerHTML = "Type hour value"     
+    } else if (resultadoHoras.total === undefined){        
+        valorReceber.innerHTML = "Type time hour";
     } else {
 
         const valorSalario = valorHora * resultadoHoras.total;
@@ -97,7 +101,10 @@ function calcularValor() {
             "Salary total without discount: $ <strong>" + valorSalario.toFixed(2) + "</strong>"+ "</strong><br>";
             //"Salary final: $ <strong>" + valorLiquido.toFixed(2) + "</strong>";
         //alert("valor resultadoHoras.total " + resultadoHoras.total)
+
     }
+    
+    
 }
 
 function limpa() {
