@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salary Calculator</title>
+</head>
+<body>
+    <h2>
+        Salary Calculator
+    </h2> 
+
+    <p>Type the time to add</p>
+    <input type="number" id="horaDigitada" placeholder="Type the hour">
+    <button onclick="btnAdicionar()">Add hour</button>
+    <div id="resultado"></div>
+    <div id="dias"></div>
+    <br>
+    <div id="areaDesfazerUltimoDia"></div>
+    
+    <br>
+    <p id="relatorio"></p>
+    <p id="valorReceber"></p>
+    <p>Type the value or hour</p>
+    <input type="number" id="valorHora" placeholder="Hour value">
+    <button onclick="calcularValor()">Calculator</button>
+    <br><br>
+    <button onclick="limpa()">CLEAR</button>    
+    <script src="index.js"></script>
+</body>
+</html>
