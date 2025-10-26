@@ -16,7 +16,7 @@ let resultadoHoras = {};
 
 // --- Botão "Erase Last Day" ---
 let btnDesfazerUltimoDia = document.createElement("button");
-btnDesfazerUltimoDia.innerText = "ERASE LAST DAY";
+btnDesfazerUltimoDia.innerText = "ERASE LAST DAY?";
 btnDesfazerUltimoDia.classList.add("btn", "btn-warning", "mt-2");
 btnDesfazerUltimoDia.style.display = "none";
 btnDesfazerUltimoDia.addEventListener("click", desfazerUltimoDia);
@@ -85,19 +85,25 @@ function calcularValor() {
   } else if (!resultadoHoras.total) {
     valorReceber.innerHTML = `<div class="alert alert-warning">Type time hour</div>`;
   } else {
-    const valorSalario = valorHora * resultadoHoras.total;
+    // Valor normal (até 8h por dia)
     const valorReceberNormal = valorHora * resultadoHoras.horaSemExtra;
+
+    // Valor das horas extras (1.5x)
     const valorReceberExtra = (valorHora * 1.5) * resultadoHoras.horaExtra;
+
+    // Total final = normal + extra
+    const valorTotal = valorReceberNormal + valorReceberExtra;
 
     valorReceber.innerHTML = `
       <div class="alert alert-success">
         Normal value to receive: $<strong>${valorReceberNormal.toFixed(2)}</strong><br>
         Extra value to receive: $<strong>${valorReceberExtra.toFixed(2)}</strong><br>
-        Salary total (before deductions): $<strong>${valorSalario.toFixed(2)}</strong>
+        Salary total (before deductions): $<strong>${valorTotal.toFixed(2)}</strong>
       </div>
     `;
   }
 }
+
 
 // --- Limpa tudo ---
 function limpa() {
