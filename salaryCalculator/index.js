@@ -1,3 +1,4 @@
+let teste;
 const STORAGE_KEY = "salaryCalculatorData";
 
 const horasTotais = {
