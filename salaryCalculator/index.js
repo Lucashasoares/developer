@@ -29,16 +29,23 @@ if (horasTotais.horaTotal.length > 0) {
 
 // --- Função para adicionar hora ---
 function btnAdicionar() {
-  const horaa = horaDigitada.value.trim();
+  const horaa = horaDigitada.value.trim().replace(',', '.');
+  const duasCasasDecimais = /^\d{1,2}(\.\d{1,2})?$/;
 
-  if (horaa !== "" && !isNaN(horaa)) {
-    horasTotais.horaTotal.push(parseFloat(horaa));
-    horaDigitada.value = "";
+  if (duasCasasDecimais.test(horaa)) {
+    const valor = parseFloat(horaa); // converte corretamente para número
 
-    salvarNoStorage();
-    resultadoHoras = tudo();
+    if (valor <= 24) {
+      horasTotais.horaTotal.push(valor);
+      horaDigitada.value = "";
+
+      salvarNoStorage();
+      resultadoHoras = tudo();
+    } else {
+      alert("The number cannot be greater than 24.");
+    }
   } else {
-    alert("Please type a valid number for the hour.");
+    alert("Please type a valid number for the hour (max 2 decimals).");
   }
 }
 
@@ -78,7 +85,16 @@ function tudo() {
 
 // --- Calcula o valor do salário ---
 function calcularValor() {
-  const valorHora = parseFloat(document.getElementById("valorHora").value);
+  const valorHoraStr = document.getElementById("valorHora").value.trim().replace(',', '.');
+
+  const valorHoraDuasCasas = /^\d{1,2}(\.\d{1,2})?$/;
+
+  if (!valorHoraDuasCasas.test(valorHoraStr)){
+    valorReceber.innerHTML = `<div class="alert alert-danger">Type a valid hour value (max 2 digits before and 2 after the decimal)</div>`;
+    return;
+  }
+
+  const valorHora = parseFloat(valorHoraStr);
 
   if (isNaN(valorHora)) {
     valorReceber.innerHTML = `<div class="alert alert-danger">Type hour value</div>`;
