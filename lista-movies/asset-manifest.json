@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/lista-movies/static/css/main.1a50ddd5.css",
-    "main.js": "/lista-movies/static/js/main.f10c6ea5.js",
+    "main.js": "/lista-movies/static/js/main.04f87d6b.js",
     "index.html": "/lista-movies/index.html",
     "main.1a50ddd5.css.map": "/lista-movies/static/css/main.1a50ddd5.css.map",
-    "main.f10c6ea5.js.map": "/lista-movies/static/js/main.f10c6ea5.js.map"
+    "main.04f87d6b.js.map": "/lista-movies/static/js/main.04f87d6b.js.map"
   },
   "entrypoints": [
     "static/css/main.1a50ddd5.css",
-    "static/js/main.f10c6ea5.js"
+    "static/js/main.04f87d6b.js"
   ]
 }
