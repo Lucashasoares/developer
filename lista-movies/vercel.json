@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/lista-movies/(.*)",
+      "destination": "/lista-movies/index.html"
+    }
+  ]
+}
