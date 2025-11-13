@@ -17,6 +17,18 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+
+
+
+
+function myFunction(){
+    alert(`
+    Project in progress...
+`)}
+
+
+
+
 // Função para abrir a imagem maior no modal
 function openImage(imageSrc) {
     var modal = document.getElementById('image-modal');

@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lucas Alves - Portfolio</title>
+    <title>Lucas Soares - Portfolio</title>
     <link rel="stylesheet" href="styles.css">
     <script defer src="script.js"></script>
 </head>
 <body>
     <header>
         <h1>Lucas Soares</h1>
-        <p>Front-End Developer | Scrum Master | Digital Creator</p>
+        <p>Software Developer</p>
 
         <!-- Botão do menu hambúrguer -->
         <div class="menu-toggle" onclick="toggleMenu()">
@@ -33,11 +33,14 @@
 
     <section id="about">
         <h2>About me</h2>
-        <p>I am a Front-End Developer with hands-on experience in building 
-          responsive websites, creating clean digital designs, and applying 
-          Agile methodologies. I am passionate about developing user-friendly 
-          applications, continuously improving my technical skills in React and 
-          Node.js, and contributing to collaborative, value-driven teams.</p>
+        <p>I am a Full-Stack Developer with practical experience in 
+          building responsive and user-friendly websites. I have strong 
+          skills in HTML, CSS, and JavaScript, and I’m developing my 
+          knowledge in React, Java and mySQL. I’m also familiar with GitHub, 
+          Agile/Scrum practices, JUnit, Mockito, and Jenkins. 
+          I’m passionate about learning new technologies, writing 
+          clean and efficient code, and contributing to collaborative, 
+          value-driven teams.</p>
     </section>
 
     <!-- Seção de Habilidades -->
@@ -46,6 +49,8 @@
         <ul>
             <li>HTML & CSS</li>
             <li>JavaScript</li>
+            <li>Java - <b>Learning Focus:</b> JavaFX, RabbitMQ, WebSockets, OAuth 2.0</li>
+            <li>My SQL</li>
             <li>React</li>
             <li>Agile Methodologies (Scrum, Kanban)</li>
             <li>Responsive Design</li>
@@ -66,17 +71,23 @@
             <p>Movies in React</p>
           </a>
         </div>
-        <div class="image-container">
+        <!--<div class="image-container">
           <a href="#">
-            <img src="imagem3.jpg" alt="Imagem 3">
+            <img src="gallery/inProgress.jpg" alt="Project in Progress">
             <p>-----</p>
           </a>
         </div>
-        <div class="image-container">
+        <div class="image-container" >
           <a href="#">
-            <img src="imagem4.jpg" alt="Imagem 4">
+            <img src="gallery/inProgress.jpg" alt="Project in Progress">
             <p>-----</p>
           </a>
+        </div>-->
+        <div class="certification-item" onclick="openImage('gallery/inProgress1.jpg')">
+          <img src="gallery/inProgress.jpg" alt="Project in Progress">
+        </div>
+        <div class="certification-item" onclick="openImage('gallery/inProgress1.jpg')">
+          <img src="gallery/inProgress.jpg" alt="Project in Progress">
         </div>
       
 </section>
@@ -124,10 +135,10 @@
             <img src="gallery/scrum-thumb.jpg" alt="Scrum Master" />
             <p>Scrum Master</p>
         </div>
-        <div class="certification-item" onclick="openImage('gallery/product-owner.jpg')">
+        <!--<div class="certification-item" onclick="openImage('gallery/product-owner.jpg')">
             <img src="gallery/product-owner-thumb.jpg" alt="Product Owner" />
             <p>Product Owner</p>
-        </div>
+        </div>-->
         <div class="certification-item" onclick="openImage('gallery/kanban.jpg')">
             <img src="gallery/kanban-thumb.jpg" alt="Kanban" />
             <p>Kanban</p>
@@ -146,25 +157,25 @@
   <button class="carrossel-seta carrossel-seta-esquerda" onclick="moverCarrossel(-1)">&#10094;</button>
   
   <div class="carrossel-container">
-      <div class="carrossel-item">
+      <!--<div class="carrossel-item">
           <img src="gallery/logos/cjp-240x215.png" alt="Imagem 1">
-      </div>
+      </div>-->
       <div class="carrossel-item">
           <img src="gallery/logos/copy7-575x515.png" alt="Imagem 2">
       </div>
       <div class="carrossel-item">
           <img src="gallery/logos/corpo-575x515.png" alt="Imagem 3">
       </div>
-      <div class="carrossel-item">
+      <!--<div class="carrossel-item">
           <img src="gallery/logos/fatima-575x515.png" alt="Imagem 4">
-      </div>
+      </div>-->
       <div class="carrossel-item">
           <img src="gallery/logos/icl-575x515.png" alt="Imagem 5">
       </div>
       <div class="carrossel-item">
           <img src="gallery/logos/optica-575x515.png" alt="Imagem 6">
       </div>
-      <div class="carrossel-item">
+      <!--<div class="carrossel-item">
           <img src="gallery/logos/paes-575x515.png" alt="Imagem 7">
       </div>
       <div class="carrossel-item">
@@ -172,7 +183,7 @@
       </div>
       <div class="carrossel-item">
           <img src="gallery/logos/respire-575x515.png" alt="Imagem 9">
-      </div>
+      </div>-->
       <div class="carrossel-item">
           <img src="gallery/logos/zen-575x515.png" alt="Imagem 10">
       </div>
@@ -194,7 +205,7 @@
         <h2>Contact</h2>
         <p>Connect with me on:</p>
         <ul>
-            <li>Email: lucashasoares@gmail.com</li>
+            <li>Email: <a href="mailto:lucashasoares@gmail.com">lucashasoares@gmail.com</a></li>
             <li>LinkedIn: <a href="https://www.linkedin.com/in/lucas-ha-soares/">linkedin.com/in/lucas-ha-soares</a></li>
             <li>GitHub: <a href="https://github.com/Lucashasoares">github.com/Lucashasoares</a></li>
         </ul>
