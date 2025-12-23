@@ -12,7 +12,7 @@
 <body>
   <header>
     <h1>Lucas Soares</h1>
-    <p>Software Developer</p>
+    <p>Front-End Developer</p>
 
     <!-- Botão do menu hambúrguer -->
     <div class="menu-toggle" onclick="toggleMenu()">
@@ -33,16 +33,18 @@
     </nav>
   </header>
 
-  <section id="about">
+  <section>
     <h2>About me</h2>
-    <p>I am a Full-Stack Developer with practical experience in
-      building responsive and user-friendly websites. I have strong
-      skills in HTML, CSS, and JavaScript, and I’m developing my
-      knowledge in React, Java and mySQL. I’m also familiar with GitHub,
-      Agile/Scrum practices, JUnit, Mockito, and Jenkins.
-      I’m passionate about learning new technologies, writing
-      clean and efficient code, and contributing to collaborative,
-      value-driven teams.</p>
+    <p id="about">Front-End Developer with hands-on experience building responsive,
+      user-focused web applications using JavaScript, React, HTML, and CSS.<br>
+      I have worked on freelance and personal projects, developing clean,
+      accessible, and maintainable interfaces, with strong attention to
+      usability, performance, and responsive design. I enjoy translating
+      product and design requirements into functional front-end solutions.<br>
+      My background in Agile product teams and UX-aware workflows allows
+      me to collaborate effectively with designers, product owners, and
+      developers, contributing to well-structured and user-centered applications.
+    </p>
   </section>
 
   <!-- Seção de Habilidades -->
@@ -51,7 +53,6 @@
     <ul>
       <li>HTML & CSS</li>
       <li>JavaScript</li>
-      <li>Java - <b>Learning Focus:</b> JavaFX, RabbitMQ, WebSockets, OAuth 2.0</li>
       <li>My SQL</li>
       <li>React</li>
       <li>Agile Methodologies (Scrum, Kanban)</li>
@@ -59,47 +60,41 @@
     </ul>
   </section>
 
-  <!-- Seção de Websites -->
-  <section class="image-section">
-    <div class="image-container">
-      <a href="https://www.lucasdeveloper.ca/lista-movies" target="_blank">
-        <img src="gallery/primeFlix.jpg" alt="analytics-dashboard">
-        <p>Now Playing in React</p>
-      </a>
+  <section>
+    <div class="section-title">
+      <h2>Projects</h2>
     </div>
-    <div class="image-container">
-      <a href="https://www.lucasdeveloper.ca/movies" target="_blank">
-        <img src="gallery/movies.jpg" alt="movies">
-        <p>Movies in React</p>
-      </a>
-    </div>
-    <!--<div class="image-container">
-          <a href="#">
-            <img src="gallery/inProgress.jpg" alt="Project in Progress">
-            <p>-----</p>
-          </a>
-        </div>
-        <div class="image-container" >
-          <a href="#">
-            <img src="gallery/inProgress.jpg" alt="Project in Progress">
-            <p>-----</p>
-          </a>
-        </div>-->
-    <div class="certification-item">
-      <div class="image-container">
-        <a href="https://www.lucasdeveloper.ca/salaryCalculator/" target="_blank">
-          <img src="gallery/salaryCalculator.jpg" alt="Salary Calculator">
-          <p>Salary Calculator in HMTL / CSS / Javascript</p>
+
+    <div class="image-grid">
+      <div class="project-card">
+        <a href="https://www.lucasdeveloper.ca/lista-movies" target="_blank">
+          <img src="gallery/primeFlix.jpg" alt="analytics-dashboard">
+          <p>Now Playing in React</p>
         </a>
       </div>
-    </div>
-    <div class="certification-item" onclick="openImage('gallery/inProgress1.jpg')">
-      <img src="gallery/inProgress.jpg" alt="Project in Progress">
-    </div>
 
+      <div class="project-card">
+        <a href="https://www.lucasdeveloper.ca/movies" target="_blank">
+          <img src="gallery/movies.jpg" alt="movies">
+          <p>Movies in React</p>
+        </a>
+      </div>
+
+      <div class="project-card">
+        <a href="https://www.lucasdeveloper.ca/salaryCalculator/" target="_blank">
+          <img src="gallery/salaryCalculator.jpg" alt="Salary Calculator">
+          <p>Salary Calculator in HTML / CSS / JavaScript</p>
+        </a>
+      </div>
+
+      <div class="project-card" onclick="openImage('gallery/inProgress1.jpg')">
+        <img src="gallery/inProgress.jpg" alt="Project in Progress">
+        <p onclick="openImage('gallery/inProgress1.jpg')">Project in progress...</p>
+      </div>
+    </div>
   </section>
 
-  <section id="websites">
+  <section>
     <div>
       <h2>Web Sites</h2>
     </div>
@@ -119,7 +114,8 @@
           <h3>Nexus Care</h3>
           <p>Introducing a pioneering health concept, our Pilates studio features a team of skilled and seasoned
             professionals committed to your well-being.</p>
-          <a href="https://www.nexuscare.bsb.br/" class="btn" target="_blank" rel="noopener noreferrer" disabled="disabled">To view</a>
+          <a href="https://www.nexuscare.bsb.br/" class="btn" target="_blank" rel="noopener noreferrer"
+            disabled="disabled">To view</a>
         </div>
       </div>
 
@@ -139,6 +135,10 @@
   <section>
     <h2>Certifications</h2>
     <div id="certifications">
+      <div class="certification-item" onclick="openImage('gallery/javascript.jpg')">
+        <img src="gallery/javascript-thumb.jpg" alt="JavaScript" />
+        <p>JavaScript</p>
+      </div>
       <div class="certification-item" onclick="openImage('gallery/scrum.jpg')">
         <img src="gallery/scrum-thumb.jpg" alt="Scrum Master" />
         <p>Scrum Master</p>
@@ -150,10 +150,6 @@
       <div class="certification-item" onclick="openImage('gallery/kanban.jpg')">
         <img src="gallery/kanban-thumb.jpg" alt="Kanban" />
         <p>Kanban</p>
-      </div>
-      <div class="certification-item" onclick="openImage('gallery/javascript.jpg')">
-        <img src="gallery/javascript-thumb.jpg" alt="JavaScript" />
-        <p>JavaScript</p>
       </div>
     </div>
   </section>
