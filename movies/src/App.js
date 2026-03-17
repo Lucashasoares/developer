@@ -22,13 +22,13 @@ function App() {
         params: {
           api_key: apiKey, // Chave de API
           query: query, // Palavra-chave digitada pelo usuário
-          language: 'pt-BR' // Para trazer os resultados em português
+          language: 'en-US' // Para trazer os resultados em português
         }
       });
 
       setMovies(response.data.results || []);
     } catch (error) {
-      console.error('Erro ao buscar filmes:', error);
+      console.error('Error fetching movies:', error);
     } finally {
       setLoading(false);
     }
@@ -44,11 +44,11 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Buscador de Filmes</h1>
+      <h1>Movie Search</h1>
 
       <input
         type="text"
-        placeholder="Digite o nome do filme..."
+        placeholder="Enter the movie name..."
         value={query}
         onChange={(e) => setQuery(e.target.value)}
       />
@@ -69,7 +69,7 @@ function App() {
             </div>
           ))
         ) : (
-          <p>Nenhum filme encontrado.</p>
+          <p>No movies found.</p>
         )}
       </div>
 
